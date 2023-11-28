@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +14,7 @@ public class ChOptions
 				
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized");
+		options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
 		
 			WebDriver driver=new ChromeDriver(options);
 			
